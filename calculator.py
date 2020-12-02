@@ -1,17 +1,25 @@
-# Version 1
-# This Version include "input", "output" and "Type Change"
+# Version 2
 
-num1 = input("Please Enter 1st Number: ")
-num2 = input("Please Enter 2st Number: ")
-
-# وقتی کاربر ما عدد را وارد می کند این عدد به صورت string ذخیره میشود و باید آن را به integer تبدیل کنیم،
-# برای انجام این کار از تابع int استفاده می کنیم.
-
-sum = int(num1) + int(num2)
-division = int(num1) / int(num2)
-
-print(num1, "+", num2, "=", sum)
-
-# .2f --> یعنی تا دو رقم اعشار را نشان بده
-
-print("{0} / {1} = {2:.2f}".format(num1, num2, division))
+print("Welcome to warrior calculator!\n")
+print("1. Sum(+)")
+print("2. Subtract(-)")
+print("3. Multiply(*)")
+print("4. Divide(/)")
+opt = int(input("\nPlease one of the above options: "))
+if opt <= 4:
+    num1 = int(input("Please Enter First Number: "))
+    num2 = int(input("Please Enter Second Number: "))
+    if opt == 1:
+        result = num1 + num2
+        print("{0} + {1} = {2}".format(num1, num2, result))
+    elif opt == 2:
+        result = num1 - num2
+        print("{0} - {1} = {2}".format(num1, num2, result))
+    elif opt == 3:
+        result = num1 * num2
+        print("{0} * {1} = {2}".format(num1, num2, result))
+    elif opt == 4:
+        result = num1 / num2
+        print("{0} / {1} = {2}".format(num1, num2, result))
+else:
+    print("Invalid Option!")
